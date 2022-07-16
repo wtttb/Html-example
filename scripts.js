@@ -1,5 +1,6 @@
 window.onload = function () {
-  const navOpen = document.querySelector(".heading__nav--open"),
+  const
+    navOpen = document.querySelector(".heading__nav--open"),
     navClose = document.querySelector(".heading__nav--close"),
     navPoup = document.querySelector(".heading__nav--popup"),
     warp = document.querySelector(".warp");
