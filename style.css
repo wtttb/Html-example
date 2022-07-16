@@ -1,0 +1,17 @@
+:root { --white: #ffffff; --black: #000000; }
+
+* { margin: 0; padding: 0; list-style: none; text-decoration: none; box-sizing: border-box; }
+
+html, body { min-height: 100vh; }
+
+html { font-size: 16px; }
+
+body { overflow-x: hidden; font-size: 1rem; font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif; line-height: 1.75; letter-spacing: 0.0625rem; }
+
+img { height: auto; image-rendering: -moz-crisp-edges; image-rendering: -o-crisp-edges; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; -ms-interpolation-mode: nearest-neighbor; vertical-align: middle; }
+
+img, video { max-width: 100%; }
+
+video { min-height: 32rem; }
+
+.heading { color: var(--black); }

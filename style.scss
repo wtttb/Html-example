@@ -1,0 +1,66 @@
+$font-size: 16px;
+
+@function toRem($px) {
+  @return $px / $font-size * 1rem;
+}
+
+@function toRemF($px) {
+  @return (-($px / $font-size * 1rem));
+}
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+html {
+  font-size: $font-size;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 1rem;
+  font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica,
+    "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB",
+    "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN",
+    "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti",
+    SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  line-height: 1.75;
+  letter-spacing: toRem(1px);
+}
+
+img {
+  height: auto;
+  image-rendering: -moz-crisp-edges; // Firefox
+  image-rendering: -o-crisp-edges; // Opera
+  image-rendering: -webkit-optimize-contrast; // Webkit (non-standard naming)
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; // IE (non-standard property)
+  vertical-align: middle;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+video {
+  min-height: toRem(512px);
+}
+
+.heading {
+  color: var(--black);
+}
