@@ -1,32 +1,38 @@
-$font-size: 16px;
+$font16: 16px;
 
 @function toRem($px) {
-  @return $px / $font-size * 1rem;
+  @return $px / $font16 * 1rem;
 }
 
 @function toRemF($px) {
-  @return (-($px / $font-size * 1rem));
+  @return (-($px / $font16 * 1rem));
 }
 
-$desktopslarge: toRem(1200px);
-$desktops: toRem(992px);
-$tablets: toRem(768px);
-$phones: toRem(576px);
+$desktop1200: toRem(1200px);
+$desktop992: toRem(992px);
+$tablet768: toRem(768px);
+$phone576: toRem(576px);
 
 :root {
   --base: rgb(255, 42, 81);
   --basergb: 255, 41, 80;
+  // 白色
   --white: rgb(255, 255, 255);
-  --whitergb: 255, 255, 255;
-  --black: rgb(27, 27, 27);
-  --blackrgb: 27, 27, 27;
-  --gray: rgb(49, 49, 49);
-  --grayrgb: 49, 49, 49;
+  --white-rgb: 255, 255, 255;
+  // 干黑
+  --black: rgb(33, 33, 33);
+  --black-rgb: 33, 33, 33;
+  // 深灰
+  --gray: rgb(70, 70, 70);
+  --gray-rgb: 70, 70, 70;
+  // 柔灰
+  --soft-gray: rgb(204, 204, 204);
+  --soft-gray-rgb: 204, 204, 204;
 
-  --desktopslarge: $desktopslarge;
-  --desktops: $desktops;
-  --tablets: $tablets;
-  --phones: $phones;
+  --desktop1200: $desktop1200;
+  --desktop992: $desktop992;
+  --tablet768: $tablet768;
+  --phone576: $phone576;
 }
 
 * {
@@ -43,7 +49,7 @@ body {
 }
 
 html {
-  font-size: $font-size;
+  font-size: $font16;
 }
 
 body {
@@ -130,6 +136,22 @@ code {
   &::-webkit-scrollbar-thumb {
     background: RGBA(var(--whitergb), .2) !important;
     background-image: none;
+  }
+}
+
+@mixin olul {
+
+  ul,
+  ol {
+    padding-left: toRem(26px);
+  }
+
+  ul li {
+    list-style: disc;
+  }
+
+  ol li {
+    list-style: decimal;
   }
 }
 

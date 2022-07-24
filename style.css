@@ -1,5 +1,5 @@
 @charset "UTF-8";
-:root { --base: #ff2a51; --basergb: 255, 41, 80; --white: white; --whitergb: 255, 255, 255; --black: #1b1b1b; --blackrgb: 27, 27, 27; --gray: #313131; --grayrgb: 49, 49, 49; --desktopslarge: 75rem; --desktops: 62rem; --tablets: 48rem; --phones: 36rem; }
+:root { --base: #ff2a51; --basergb: 255, 41, 80; --white: white; --white-rgb: 255, 255, 255; --black: #212121; --black-rgb: 33, 33, 33; --gray: #464646; --gray-rgb: 70, 70, 70; --soft-gray: #cccccc; --soft-gray-rgb: 204, 204, 204; --desktop1200: 75rem; --desktop992: 62rem; --tablet768: 48rem; --phone576: 36rem; }
 
 * { margin: 0; padding: 0; list-style: none; text-decoration: none; box-sizing: border-box; }
 
