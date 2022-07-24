@@ -8,9 +8,25 @@ $font-size: 16px;
   @return (-($px / $font-size * 1rem));
 }
 
+$desktopslarge: toRem(1200px);
+$desktops: toRem(992px);
+$tablets: toRem(768px);
+$phones: toRem(576px);
+
 :root {
-  --white: #ffffff;
-  --black: #000000;
+  --base: rgb(255, 42, 81);
+  --basergb: 255, 41, 80;
+  --white: rgb(255, 255, 255);
+  --whitergb: 255, 255, 255;
+  --black: rgb(27, 27, 27);
+  --blackrgb: 27, 27, 27;
+  --gray: rgb(49, 49, 49);
+  --grayrgb: 49, 49, 49;
+
+  --desktopslarge: $desktopslarge;
+  --desktops: $desktops;
+  --tablets: $tablets;
+  --phones: $phones;
 }
 
 * {
@@ -31,13 +47,12 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   overflow-x: hidden;
   font-size: 1rem;
-  font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica,
-    "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB",
-    "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN",
-    "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti",
-    SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  color: var(--gray);
+  font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
   line-height: 1.75;
   letter-spacing: toRem(1px);
 }
@@ -61,6 +76,59 @@ video {
   min-height: toRem(512px);
 }
 
-.heading {
+input,
+textarea,
+button,
+select {
+  margin: toRem(2px);
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.35;
   color: var(--black);
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+h5 {
+  font-size: .875em;
+}
+
+a {
+  color: var(--base);
+  transition: .3s ease-in-out;
+}
+
+code {
+  display: block;
+  max-height: toRem(512px);
+  overflow: auto;
+  padding: toRem(16px);
+  color: var(--white);
+  background: var(--black);
+  border-radius: toRem(16px);
+  white-space: pre-wrap;
+
+  &::-webkit-scrollbar-corner,
+  &::-webkit-scrollbar-track {
+    background: RGBA(var(--grayrgb), .4) !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: RGBA(var(--whitergb), .2) !important;
+    background-image: none;
+  }
 }

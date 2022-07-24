@@ -1,4 +1,4 @@
-:root { --white: #ffffff; --black: #000000; }
+:root { --base: #ff2a51; --basergb: 255, 41, 80; --white: white; --whitergb: 255, 255, 255; --black: #1b1b1b; --blackrgb: 27, 27, 27; --gray: #313131; --grayrgb: 49, 49, 49; --desktopslarge: 75rem; --desktops: 62rem; --tablets: 48rem; --phones: 36rem; }
 
 * { margin: 0; padding: 0; list-style: none; text-decoration: none; box-sizing: border-box; }
 
@@ -6,7 +6,7 @@ html, body { min-height: 100vh; }
 
 html { font-size: 16px; }
 
-body { overflow-x: hidden; font-size: 1rem; font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif; line-height: 1.75; letter-spacing: 0.0625rem; }
+body { display: flex; flex-direction: column; overflow-x: hidden; font-size: 1rem; color: var(--gray); font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif; line-height: 1.75; letter-spacing: 0.0625rem; }
 
 img { height: auto; image-rendering: -moz-crisp-edges; image-rendering: -o-crisp-edges; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; -ms-interpolation-mode: nearest-neighbor; vertical-align: middle; }
 
@@ -14,4 +14,18 @@ img, video { max-width: 100%; }
 
 video { min-height: 32rem; }
 
-.heading { color: var(--black); }
+input, textarea, button, select { margin: 0.125rem; background: transparent; border: none; outline: none; resize: none; -webkit-appearance: none; -webkit-tap-highlight-color: transparent; }
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.35; color: var(--black); }
+
+h3 { font-size: 1.25em; }
+
+h5 { font-size: .875em; }
+
+a { color: var(--base); transition: .3s ease-in-out; }
+
+code { display: block; max-height: 32rem; overflow: auto; padding: 1rem; color: var(--white); background: var(--black); border-radius: 1rem; white-space: pre-wrap; }
+
+code::-webkit-scrollbar-corner, code::-webkit-scrollbar-track { background: RGBA(var(--grayrgb), 0.4) !important; }
+
+code::-webkit-scrollbar-thumb { background: RGBA(var(--whitergb), 0.2) !important; background-image: none; }
