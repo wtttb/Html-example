@@ -130,11 +130,11 @@ code {
 
   &::-webkit-scrollbar-corner,
   &::-webkit-scrollbar-track {
-    background: RGBA(var(--grayrgb), .4) !important;
+    background: RGBA(var(--gray-rgb), .4) !important;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: RGBA(var(--whitergb), .2) !important;
+    background: RGBA(var(--white-rgb), .2) !important;
     background-image: none;
   }
 }
@@ -165,12 +165,12 @@ code {
 
 ::-webkit-scrollbar-corner,
 ::-webkit-scrollbar-track {
-  background: RGBA(var(--grayrgb), .2);
+  background: RGBA(var(--gray-rgb), .2);
   border-radius: toRem(100px);
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--base);
-  background-image: -webkit-linear-gradient(45deg, RGBA(var(--whitergb), .2) 25%, transparent 25%, transparent 50%, RGBA(var(--whitergb), .2) 50%, RGBA(var(--whitergb), .2) 75%, transparent 75%, transparent);
+  background-image: -webkit-linear-gradient(45deg, RGBA(var(--white-rgb), .2) 25%, transparent 25%, transparent 50%, RGBA(var(--white-rgb), .2) 50%, RGBA(var(--white-rgb), .2) 75%, transparent 75%, transparent);
   border-radius: toRem(100px);
 }
