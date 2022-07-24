@@ -132,3 +132,23 @@ code {
     background-image: none;
   }
 }
+
+/*==================================== 默认滚动条 ====================================*/
+::-webkit-scrollbar {
+  width: toRem(8px);
+  height: toRem(8px);
+  background: transparent;
+
+}
+
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track {
+  background: RGBA(var(--grayrgb), .2);
+  border-radius: toRem(100px);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--base);
+  background-image: -webkit-linear-gradient(45deg, RGBA(var(--whitergb), .2) 25%, transparent 25%, transparent 50%, RGBA(var(--whitergb), .2) 50%, RGBA(var(--whitergb), .2) 75%, transparent 75%, transparent);
+  border-radius: toRem(100px);
+}
